@@ -1,0 +1,10 @@
+<select name="airport">
+    <option>-- Select Airport --</option>
+    <% 
+        let airports = ['AUS', 'DAL', 'LAX', 'SEA', 'SAN'];
+        for (airport of airports){
+            if (airport !== flight.airport){
+    %>
+    <option><%= airport%></option>
+    <% }} %>
+</select>

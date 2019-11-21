@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1><span>PollutionAir</span> - <%= title %></h1>
+    <%- include("../partials/nav") %>
+    <main>
+        <table>
+            <thead>
+                <th>Airline</th>
+                <th>Flight Number</th>
+                <th>Departure</th>
+                <th>Departure Airport</th>
+                <th></th>
+            </thead>
+            <% flights.forEach((flight)=>{ %>
+            <tr>
+                <td><%=flight.airline%></td>
+                <td><%=flight.flightNo%></td>
+                <td class="<%= 
+                flight.departs < new Date() ? 'redTd' : '' %>">
+                <%=flight.departs%></td>
+                <td><%=flight.airport%></td>
+                <td><a href="/flights/<%= flight._id %>">Details</a></td>
+            </tr>
+            <% }); %>
+        </table>
+        <a href="/flights/new"><button class="btnAdd">Add Flight</button></a>
+    </main>
+</body>
+
+</html>

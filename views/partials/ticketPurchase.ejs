@@ -1,0 +1,12 @@
+<form action="/tickets" method="POST">
+    <% let seatColumn = ['A', 'B', 'C', 'D', 'E', 'F'] %>
+    <select name="seat">
+        <% for(let char of seatColumn) { %>
+        <% for(let n = 1; n < 100; ++n) {
+                    let seat = char + n; %>
+        <option><%= seat %></option>
+        <% }} %>
+    </select>
+    <input type="number" name="price" value="0" placeholder="Price in USD">
+    <button type="submit" class="btnAdd">Purchase</button>
+</form>

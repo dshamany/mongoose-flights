@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1><%= title %></h1>
+    <%- include('../partials/nav') %>
+    <main id="show">
+        <h2>Flight:</h2>
+        <p>
+            <%= flight.airline %>
+            <%= flight.flightNo %>
+        </p>
+
+        <h2>Departure:</h2>
+        <p><%= dateFormatted %></p>
+        <p><%= flight.departs.toLocaleTimeString() %></p>
+        <p><%= flight.airport %></p>
+
+        <form action="/flights/<%= flight._id %>/destinations" method="POST">
+            <h2>Destination Arrival</h2>
+            <%- include('../partials/airportDropdown') %>
+            <input type="date" name="arrival" />
+            <button type="submit" class="btnAdd">Add</button>
+        </form>
+
+        <hr>
+
+        <table>
+            <thead>
+            <th>Destination Airport</th>
+            <th>Arrival Time</th>
+            </thead>
+            <tbody>
+                <% for (destination of flight.destinations){ %>
+                <tr>
+                    <td><%= destination.airport %></td>
+                    <td><%= destination.arrival %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+        
+        <hr>
+        <br>
+        <h2>Tickets Sold</h2>
+        <table>
+            <thead>
+                <th>Seat</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <% tickets.forEach((flight)=>{ %>
+                    <tr>
+                        <td><%= flight.seat%></td>
+                        <td>$<%= flight.price%></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <h2>Purchase Tickets</h2>
+        <form action="/flights/<%= flight._id %>/tickets/new" method="GET">
+            <button class="btnAction">Buy Seat</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+
+        <h2>*** Danger Zone ***</h2>
+        <form action="/flights/<%= flight._id %>?_method=DELETE" method=POST>
+            <button class="danger-zone"><b>Delete Flight</b></button>
+        </form>                
+    </main>
+</body>
+
+</html>

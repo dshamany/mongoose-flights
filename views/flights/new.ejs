@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1><span>PollutionAir</span> - Add <%= title %></h1>
+    <%- include("../partials/nav") %>
+    <main>
+    <form action="/flights" method="POST">
+        <select name="airline">
+            <option>-- Select Airline --</option>
+            <option >American</option>
+            <option>Southwest</option>
+            <option>United</option>
+        </select>
+        <input type="text" name="flightNo" placeholder="Flight Number" />
+        <select name="airport">
+            <% 
+                    let airports = ['-- Select Airport --', 'AUS', 'DAL', 'LAX', 'SEA', 'SAN'];
+                    for (airport of airports){
+                %>
+            <option><%= airport%></option>
+            <% } %>
+        </select>
+        <br>
+        <input type="date" name="departs-date" placeholder="Departure Date" />
+        <input type="time" name="departs-time" placeholder="Departure Time" />
+        <br>
+        <button type="submit" class="btnAdd">Add Flight</button>
+        <a href="/flights"><button class="btnCancel" type="button">Cancel</button></a>
+    </form>
+    </main>
+</body>
+</html>

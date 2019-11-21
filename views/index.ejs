@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <%- include("./partials/nav.ejs") %>
+  <main>
+    <h2>About <%= title %></h2>
+
+    <p>In 2019, we formed a company that will enable you to pollute the air at a faster rate than ever precedented. When dinasours give you oil...well, you probably heard the saying. It is our fiduciary duty to give our investors a ton of money while paying our crew next to nothing. We mean it! Our pilots are paid in potatoes we grow in the CEOs backyard. Truly organic!</p>
+
+    <p>Our customer service is excellent! We don't even ask you were you're going, and neither do we have to know. Are you tired of the TSA? No worries, we have no security checks whatsoever. We even pay lobbyists to remove security tests from aircrafts so that we can produce more and fly more.</p>
+
+    <p>PollutionAir is here for you (if you're a man, a hot woman, not gay, black, nor middle-eastern)!</p>
+  </main>
+</body>
+
 </html>
