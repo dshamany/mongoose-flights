@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.HOST, {
+mongoose.connect('mongodb://localhost', {
     useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true
 });
 
