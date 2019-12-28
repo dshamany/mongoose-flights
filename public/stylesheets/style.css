@@ -1,147 +1,146 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin: 0 auto;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
 }
 
 nav {
-  background-color: #000000dd;
-  width: 99vw;
-  height: 40px;
-  margin-top: -11px;
-  padding: 5px;
-  text-align: center;
+    background-color: #000000dd;
+    width: 100vw;
+    height: 40px;
+    margin-top: -11px;
+    padding: 5px;
+    text-align: center;
 }
 
-nav > ul {
-  list-style-type: none;
+nav>ul {
+    list-style-type: none;
 }
 
-nav > ul > li {
-  display: inline;
-  margin: 0 10px;
-  text-transform: uppercase;
+nav>ul>li {
+    display: inline;
+    margin: 0 10px;
+    text-transform: uppercase;
 }
 
 nav>ul>li>a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 nav>ul>li>a:hover {
-  color: white;
+    color: white;
 }
 
 main {
-  max-width: 850px;
-  text-align: center;
-  padding: 20px;
-  margin: 0 auto;
+    max-width: 850px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
 }
 
-main > p {
-  max-width: 850px;
-  margin: 10px auto;
-  text-align: justify;
-  padding: 0px 50px;
+main>p {
+    max-width: 850px;
+    margin: 10px auto;
+    text-align: justify;
+    padding: 0px 50px;
 }
 
 h1 {
-  background-image: url('https://cdn.pixabay.com/photo/2017/06/24/20/39/background-2438799_1280.jpg');
-  background-repeat: no-repeat;
-  background-position-y: 40%;
-  background-position: right;
-  background-size: cover;
-  color: white;
-  margin: 0px auto;
-  margin-bottom: 10px;
-  padding: 20px;
-  line-height: 2;
-  text-shadow: 1px 3px 3px black;
+    background-image: url('https://cdn.pixabay.com/photo/2017/06/24/20/39/background-2438799_1280.jpg');
+    background-repeat: no-repeat;
+    background-position-y: 40%;
+    background-position: right;
+    background-size: cover;
+    color: white;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    padding: 20px;
+    line-height: 2;
+    text-shadow: 1px 3px 3px black;
 }
 
 h2 {
-  max-width: 850px;
-  margin: 0 auto;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 table {
-  text-align: left;
-  margin: 30px auto;
-  border: 1px solid black;
-  width: 100%;
+    text-align: left;
+    margin: 30px auto;
+    border: 1px solid black;
+    width: 100%;
 }
 
-th, td {
-  padding: 10px;
-  border: 1px solid black;
-
+th,
+td {
+    padding: 10px;
+    border: 1px solid black;
 }
 
-table > thead {
-  text-align: center;
+table>thead {
+    text-align: center;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 .btnAdd {
-  background-color: lightgreen;
-  border: 1px solid green;
+    background-color: lightgreen;
+    border: 1px solid green;
 }
 
 .btnCancel {
-  background-color: lightsalmon;
-  border: 1px solid red;
+    background-color: lightsalmon;
+    border: 1px solid red;
 }
 
 .btnAction {
-  background-color: lightblue;
-  border: 1px solid blue;
+    background-color: lightblue;
+    border: 1px solid blue;
 }
 
 .danger-zone {
-  background-color: red;
-  border: 1px solid rgb(148, 37, 37);
+    background-color: red;
+    border: 1px solid rgb(148, 37, 37);
 }
-
 
 form {
-  text-align: center;
+    text-align: center;
 }
 
-form > input {
-  margin: 10px;
-  height: 30px;
+form>input {
+    margin: 10px;
+    height: 30px;
 }
 
 button {
-  width: 120px;
-  height: 30px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px grey;
-  margin-right: 10px;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px grey;
+    margin-right: 10px;
 }
 
 button:active {
-  margin-top: 2px;
-  margin-left: 2px;
+    margin-top: 2px;
+    margin-left: 2px;
 }
 
 #btn-view-all-flights {
-  width: 100vw;
-  margin: 0 50vw;
+    width: 100vw;
+    margin: 0 50vw;
 }
 
 .redTd {
-  color: red;
+    color: red;
 }
 
-#show > p {
-  text-align: center;
-  font-size: 18px;
-  margin: 20px auto;
+#show>p {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px auto;
 }
 
 #errorMsg {
-  color: red;
+    color: red;
 }
